@@ -1,25 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      cities: [
+        {
+          id: 1,
+          name: 'Moscow',
+        },
+        {
+          id: 2,
+          name: 'Paris'
+        },
+        {
+          id: 3,
+          name: 'London'
+        },
+        {
+          id: 4,
+          name: 'New York'
+        },
+        {
+          id: 5,
+          name: 'Madrid',
+        },
+        {
+          id: 6,
+          name: 'Tokyo'
+        }
+      ],
+      weatherOptions: [
+        {
+          id: 7,
+          name: 'sunny'
+        },
+        {
+          id: 8,
+          name: 'overcast'
+        },
+        {
+          id: 9,
+          name: 'rain'
+        },
+        {
+          id: 10,
+          name: 'snow'
+        }
+      ]
+    }
+  }
+
+
+  render() {
+    return (
+      <div className='container'>
+        <h1 className='title'>The Weather</h1>
+        <div className='city-choose'>
+          <select>
+            {this.state.cities.map(el => (
+              <option>{el.name}</option>
+            ))}
+          </select>
+          <button className='start-button'>Show</button>
+        </div>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
