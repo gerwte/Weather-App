@@ -6,9 +6,11 @@
   margin: 0;
   padding: 0;
   font-family: 'M PLUS Rounded 1c', sans-serif;
+  box-sizing: border-box;
 }
 
-body {
+.container {
+  padding-top: 50px;
   background-image: url('img/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,8 +21,6 @@ body {
   font-weight: 700;
   margin: 0 auto;
   font-size: 50px;
-  color: rgba(250, 233, 1, 0.92);
-  background-color: #fff;
   width: 30%;
   text-align: center;
   border-radius: 20px;
@@ -31,7 +31,6 @@ body {
 .city-choose {
   margin: 0 auto;
   max-width: 30%;
-
 }
 
 select {
@@ -43,6 +42,8 @@ select {
   font-size: 25px;
   text-align: center;
   border: none;
+  font-weight: 700;
+  margin-bottom: 160px;
 }
 
 .start-button {
@@ -53,5 +54,63 @@ select {
   border: none;
   font-size: 25px;
   background-color: rgb(233, 102, 102);
+  font-weight: 700;
 }
 
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.sunny-image {
+  background-image: url(img/sunny-img.png);
+  background-size: contain;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 1000px;
+}
+
+.real-temperature {
+  font-weight: bold;
+  font-size: 49px;
+  border: 1px solid black;
+  max-width: 14%;
+  margin: 0 auto;
+  border-radius: 1000px;
+  background-color: rgb(151, 233, 255);
+  color: rgb(241, 20, 20);
+  margin-bottom: 20px;
+}
+
+.temperature-notice {
+  text-align: center;
+}
+
+.city {
+  margin: 0;
+}
+
+.container-weather {
+  background-image: url(img/weather-bg.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.show-weather {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.temerature {
+  margin-left: 50px;
+  font-size: 120px;
+  font-weight: bold;  
+}
